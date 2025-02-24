@@ -1,0 +1,353 @@
+<!-- Thomas Freund Last edited: 16/02/2025-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="newStyle.css" />
+    <title>TabFlow</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Header -->
+      <div class="centrarHorizontalmente">
+        <script src="scripts/test_script.js"></script>
+        <h1 class="title">TabFlow</h1>
+        <button class="settings-button" id="settingsBtn">
+          <img
+            id="settingsBtnIcon"
+            src="iconos/new_icons/settings.png"
+            alt="Settings"
+          />
+        </button>
+        <p id="settings_tooltip" class="settings-tooltip" style="display: none;">Settings</p>
+
+      </div>
+
+      <!-- Transition Arrows -->
+      <p id="labelOne" class="centrarHorizontalmente textBold">
+        <strong>Window Transition Arrows </strong>
+      </p>
+
+      <div class="centrarHorizontalmente">
+        <button id="previous-window" class="button arrow-left">
+          <img
+            id="leftArrowBtnIcon"
+            src="iconos/new_icons/arrow_back_ios_new.png"
+            alt="<"
+          />
+        </button>
+        <button id="next-window" class="button arrow-right">
+          <img
+            id="rightArrowBtnIcon"
+            src="iconos/new_icons/arrow_forward_ios.png"
+            alt=">"
+          />
+          <!-- Asegúrate de que la ruta a la imagen es correcta -->
+        </button>
+      </div>
+
+      <!-- Tab Limit -->
+      <p id="labelTwo" class="centrarHorizontalmente textBold">
+        <strong>Tab Limit for This Window </strong>
+      </p>
+
+      <div class="centrarHorizontalmente">
+        <select id="num-selector">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="15">16</option>
+          <option value="15">17</option>
+          <option value="15">18</option>
+        </select>
+      </div>
+
+      <!-- Share and Mode Buttons -->
+
+      <!-- <div id="share-container" class="centrarHorizontalmente"> -->
+      <div id="share-platform-container">
+        <!-- Share and theme options -->
+
+        <div id="share-and-theme-container" class="centrarHorizontalmente">
+          <button
+            id="shareBtn"
+            class="share-button espacio-46 enableThemeSwitcherBackground"
+          >
+            <img
+              id="shareBtnIcon"
+              class="espacio-9 espacioTopShare"
+              src="/iconos/new_icons/share.png"
+              alt="Share Icons"
+            />
+            <span id="shareBtnLabel" class="subText">Share</span>
+          </button>
+
+          <button
+            id="themeBtn"
+            class="mode-button themeSwitcher enableThemeSwitcherBackground"
+          >
+            <img
+              id="themeBtnIcon"
+              class="espacio-14"
+              src="/iconos/new_icons/light_mode.png"
+              alt="Mode"
+            />
+            <span id="themeBtnLabel" class="subText">Mode</span>
+          </button>
+        </div>
+        <!-- Share platforms buttons -->
+
+        <div
+          id="share-platforms-container"
+          class="share-platform-buttons"
+          style="height: 72px; display: none"
+        >
+          <a id="backShareBtn" class="share-button-back">
+            <img
+              src="iconos/new_icons/arrow_back_settings_page_light.png"
+              alt="Back"
+            />
+          <a/>
+
+          <a 
+          id="clipboardShareBtn"
+          class="share-button-clipboard">
+            <img
+              src="iconos/new_icons/share/clipboard.png"
+              width="28"
+              height="28"
+              alt="Clipboard"
+            />
+          </a>
+          <p id="clipboard_tooltip" class="clipboard-tooltip" style="display: none;">Copy Msg.</p>
+          <a
+            href="https://api.whatsapp.com/send?text=Hey%20%3A%29%2C%20I%20found%20this%20FREE%20browser%20extension%20useful.%20Have%20you%20ever%20had%20the%20problem%20of%20having%20like%2020%20tiny%20tabs%20opened%20in%20a%20single%20Browser%20Window%20and%20everything%20becomes%20a%20confusing%20mess%3F%20If%20so%2C%20now%20there%20is%20a%20free%20solution%21%20Click%20the%20link%20to%20download%20here%3A%0A%20%E2%9E%A1%20Download%20Link%20%E2%AC%85%20%F0%9F%A4%A0"
+            target="_blank"
+            class="share-button-whatsapp"
+          >
+            <img
+              src="iconos/new_icons/share/whatsapp.png"
+              width="28"
+              height="28"
+              alt="WhatsApp"
+            />
+          </a>
+          <p id="whatsapp_tooltip" class="whatsapp-tooltip" style="display: none;">WhatsApp</p>
+
+          <a
+            href="https://twitter.com/intent/tweet?text=Hey%20%3A%29%2C%20I%20found%20this%20FREE%20browser%20extension%20useful.%20Have%20you%20ever%20had%20the%20problem%20of%20having%20like%2020%20tiny%20tabs%20opened%20in%20a%20single%20Browser%20Window%20and%20everything%20becomes%20a%20confusing%20mess%3F%20%21%20Click%20the%20link%20to%20download%20here%3A%20%E2%9E%A1%20Download%20Link%20%E2%AC%85%20%F0%9F%A4%A0"
+            target="_blank"
+            class="share-button-x"
+          >
+            <img
+              src="iconos/new_icons/share/x.png"
+              width="28"
+              height="28"
+              alt="Twitter"
+            />
+          </a>
+          <p id="twitter_tooltip" class="twitter-tooltip" style="display: none;">X (Twitter)</p>
+
+        </div> 
+      </div>
+      <!-- Separator and final prhase -->
+
+      <hr id="separator" class="separator" />
+
+      <!-- <p class="text centrarHorizontalmente finalPhrase">
+        <span id="wordOne" class="finalPhraseNormalWords">Find </span>
+        <span>&nbsp;</span>
+
+        <span style="color: tomato; font-style: italic">Unique </span>
+        <span>&nbsp;</span>
+        <span id="wordTwo" class="finalPhraseNormalWords"> and</span>
+        <span>&nbsp;</span>
+        <span style="color: #8a5cee; font-style: italic"> Cool </span>
+        <span>&nbsp;</span>
+        <span id="wordThree" class="finalPhraseNormalWords">products</span>
+      </p>
+      <p class="text centrarHorizontalmente ecommerceLink">Comming Soon</p> -->
+
+      <!-- Scripts -->
+      <!-- Script for handle settings page and togglers -->
+      <script src="/scripts/settings_handler.js"></script>
+      <!-- Script for disable lower options than select limit -->
+      <script src="/scripts/disable_limit_options.js"></script>
+      <!-- Script for limit select -->
+      <script src="/scripts/limit_select_logic.js"></script> 
+      
+      <!-- Script for main functions -->
+      <script src="mainFunctions.js"></script>
+      <!-- Script for share functions -->
+      <script src="/scripts/shareFunctions test.js"></script>
+      <!-- Script for move between windows -->
+      <script src="/scripts/another_and_new_window.js"></script>
+      <!-- Script for handle share tooltips -->
+      <script src="scripts/share_tooltip_handler.js"></script>
+
+    </div>
+
+    <!-------------------------- Settings page -------------------------->
+
+    <div id="settings" class="settings-container" style="display: none">
+      <div class="centrarHorizontalmente">
+        <button class="back-button" id="backBtn">
+          <img
+            id="backBtnIcon"
+            src="iconos/new_icons/arrow_back_settings_page_light.png"
+            alt="Home"
+          />
+        </button>
+
+        <h1 id="settingsLabel" class="title">Settings</h1>
+        <button class="help-button" id="helpBtn">
+          <img
+            id="helpBtnIcon"
+            src="iconos/new_icons/help_light.png"
+            alt="Help"
+          />
+        </button>
+        <p id="faq_tooltip" class="faq-tooltip" style="display: none;">FAQ</p>
+
+      </div>
+
+      <!-- <div class="centrarHorizontalmente">
+        <h2 id="premiumLabel" class="textBold2 left-margin-12">
+          Premium Features
+        </h2>
+        <button class="lock-button" id="lockBtn">
+          <img
+            id="lockBtnIcon"
+            src="iconos/new_icons/lock_open_right_light.png"
+            alt="Premium Features"
+          />
+        </button>
+      </div> -->
+      <div class="centered-flex-container"> 
+        <p id="labelThree" class="centrarHorizontalmente textBold">
+          <strong>First Window Tab Limit </strong>
+        </p>
+
+          <select id="num-selector-settings">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="15">16</option>
+            <option value="15">17</option>
+            <option value="15">18</option>
+          </select>
+  
+
+        <p id="labelFour" class="centrarHorizontalmente textBold tabOnOf">
+          <strong> TabFlow ON/OFF </strong>
+        </p>
+
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+    </div>
+        <!-- <div class="alinear-horizontalmente">
+          <p id="labelFour" class="text-settings left-margin-12 top-margin-24">
+            Window Transition
+          </p>
+          <div class="toggle-container">
+            <div class="toggle" id="toggleWindowTransition">
+              <div class="ball"></div>
+            </div>
+          </div>
+        </div>
+
+        <p id="labelFive" class="text-settings left-margin-12 bottom-margin-16">
+          Arrows shortcut: CTRL +<br />left or right arrows (⬅️➡️)
+        </p>
+
+        <div class="alinear-horizontalmente">
+          <p id="labelSix" class="text-settings left-margin-12">
+            Show me Unique and
+          </p>
+          <div class="toggle-container">
+            <div class="toggle" id="toggleShowProducts">
+              <div class="ball"></div>
+            </div>
+          </div>
+        </div>
+
+        <p id="labelSeven" class="textBold left-margin-12">Cool Products</p> -->
+    </div>
+
+    <!-- FAQ page -->
+    <div id="faq-container" style="display: none; width: 230px; height: 294px;">
+      <div class="centrarHorizontalmente">
+        <button class="back-button" id="backBtnToSettingsPage">
+          <img
+            id="backBtnFaqIcon"
+            src="iconos/new_icons/arrow_back_settings_page_light.png"
+            alt="Home"
+          />
+        </button>
+
+        <h1 id="faqLabel" class="title"> Questions </h1>
+
+      </div>
+
+<!-- <p id="labelEight" class="centrarHorizontalmente textBold" style="margin-left: 10px; margin-right: 10px;">
+  You can read the instructions for each functionality of the TabFlow extension. In our Google Web Store, Extension Download Page. Under “FEATURES”. Click the link to view it: Link.
+      </p> -->
+      <div class="review-container">
+        <p class="review-text">
+          Check the <strong>"Overview"</strong> section under <strong>"FEATURES"</strong> for details on TabFlow.
+      </p>
+      
+        <p class=" padding-bottom: 0.5em; review-title">⭐ Enjoying TabFlow?</p>
+        <p class="review-text">
+            We’d love to hear your feedback!<br>
+            Please rate and review us on the Chrome Web Store:
+        </p>
+    
+        <a id="tabFlowUrl" href="http://tinyurl.com/TabFlowext" class="review-link">
+            📝 Leave a Review Here
+        </a>
+    </div>
+    
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/openExtensionUrl.js"></script>
+    <script src="scripts/iconSwitcherHandler.js"></script>
+    <script src="/scripts/switch_logic.js"></script>
+    <script src="scripts/chat_gpt_theme_switcher.js"></script>
+    <script src="scripts/faq_handler.js"></script>
+    <script src="scripts/faq_tooltip_handler.js"></script>
+
+    <!-- <script src="/scripts/toggler_handler.js"></script> -->
+    <script src="/scripts/settings_first_window_limit_select_logic.js"></script>
+  </body>
+</html>

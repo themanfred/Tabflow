@@ -1,0 +1,833 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+}
+
+body {
+  display: flex;
+  justify-content: center; 
+  border-radius: 20px;
+  background-color: #1F1F1F;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+}
+
+#main-container {
+  border-radius: 20px;
+  /* height: 360px; */
+  height: 283px;
+
+  width: 230px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+  background-color: inherit;
+}
+
+#settings {
+  border-radius: 10px;
+  width: 230px;
+  height: 283px;
+  overflow: auto;
+  background-color: inherit;
+}
+
+/* Centered Container */
+.centered-flex-container {
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  justify-content: space-evenly;  /* Distribute items evenly */
+  align-items: center;  /* Center horizontally */
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.centrarHorizontalmente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading and Numbers */
+.title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF692E;
+  /* verde oscuro */
+}
+
+.title2 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+/* Text Bold */
+.textBold {
+  margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+.textBold2 {
+  margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+/* Text */
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+/* Link */
+.link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+/* Subtext */
+.subText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+/* Small Text */
+.smallText {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+
+.settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  /* right: 0px; */
+  /* Mueve el botÃ³n 10 pÃ­xeles a la derecha */
+  top: 16;
+  right: 12px;
+  /* Alinea el botÃ³n con la parte superior del contenedor */
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  /* right: 0px; */
+  /* Mueve el botÃ³n 10 pÃ­xeles a la derecha */
+  top: 16;
+  left: 12px;
+  /* Alinea el botÃ³n con la parte superior del contenedor */
+}
+
+
+
+
+/*------------------------- Arrows Transition Buttons-------------------------*/
+.button {
+  background-color: #343434;
+  /* fondo gris */
+  padding: 7px 23px;
+  /* margenes del Ã­cono con respecto al botÃ³n son 8 pÃ­xeles arriba, 8 pÃ­xeles abajo y 23 pÃ­xeles a cada lado horizontal */
+  margin-right: 10px;
+  /* espacio de 10 pÃ­xeles entre los dos botones */
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 17px;
+
+}
+
+/* test hover */
+/* #leftArrowBtnIcon:hover,
+#rightArrowBtnIcon:hover {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(0deg);
+} */
+
+/* test hover */
+/* Hover for arrow buttons */
+.light-theme {
+  background-color: #f0efef;
+}
+
+.dark-theme {
+  background-color: #343434;
+}
+
+/* test hover 
+.light-theme:hover {
+  background-color: #DDDDDD;
+  transition: 0.5s ease;
+}
+
+.dark-theme:hover {
+  background-color: #2B2B2B;
+  transition: 0.5s ease;
+}
+*/
+/* Hover for limit select num selector */
+
+/* #num-selector:hover {
+  background-color: green;
+  transition: 0.5s ease;
+}  */
+
+#num-selector.light-theme {
+  color: black;
+  background: url('iconos/new_icons/expand_more_black.png') no-repeat right 4px center;
+  background-color: #f0efef;
+}
+
+/*
+#num-selector.light-theme:hover {
+  background-color: #DDDDDD;
+  transition: 0.5s ease;
+}
+*/
+#num-selector.dark-theme {
+  color: white;
+  background: url('iconos/new_icons/expand_more.png') no-repeat right 4px center;
+  background-color: #343434;
+}
+
+/*
+#num-selector.dark-theme:hover {
+  background-color: #2B2B2B;
+  transition: 0.5s ease;
+}
+
+ Hover for settings num selector*/
+
+#num-selector-settings.light-theme {
+  color: black;
+  background: url('iconos/new_icons/expand_more_black.png') no-repeat right 4px center;
+  background-color: #f0efef;
+}
+
+/*
+#num-selector-settings.light-theme:hover {
+  background-color: #DDDDDD;
+  transition: 0.5s ease;
+}
+*/
+#num-selector-settings.dark-theme {
+  color: white;
+  background: url('iconos/new_icons/expand_more.png') no-repeat right 4px center;
+  background-color: #343434;
+}
+/*
+#num-selector-settings.dark-theme:hover {
+  background-color: #2B2B2B;
+  transition: 0.5s ease;
+}
+
+/* Hover for settings button */
+
+.settings-button.light-theme {
+  background-color: white;
+}
+
+.settings-button.dark-theme {
+  background-color: #1f1f1f;
+}
+
+/*
+.settings-button.light-theme:hover {
+  background-color: #DDDDDD;
+  transition: 0.5s ease;
+}
+
+.settings-button.dark-theme:hover {
+  background-color: #2B2B2B;
+  transition: 0.5s ease;
+}
+
+*/
+#previous-window.button {
+  margin-left: 40px;
+  cursor: pointer;
+  /* botÃ³n izquierdo debe estar a un espacio de 40 pÃ­xeles a la izquierdas */
+}
+
+#next-window.button {
+  margin-right: 40px;
+  cursor: pointer;
+  /* botÃ³n derecho debe tener un espacio de 40 pÃ­xeles a la derecha */
+}
+
+/*------------------------- Limit Selector-------------------------*/
+
+
+#num-selector {
+  color: #f0efef;
+  -webkit-appearance: none;
+  /* Oculta el ícono original en Chrome y Safari */
+  -moz-appearance: none;
+  /* Oculta el ícono original en Firefox */
+  appearance: none;
+  /* Oculta el ícono original en otros navegadores */
+  background: url('iconos/new_icons/expand_more.png') no-repeat right 4px center;
+  /* Ajusta este valor para mover tu ícono a la derecha */
+  font-size: 20px;
+  text-align: center;
+  /* agrega un espacio arriba y abajo de 8 píxeles y un margen de 4 píxeles a la derecha */
+  width: 100px;
+  height: 40px;
+  border: 2px solid var(--border-color, #777);
+  border-radius: 6px;
+  /*background-color: var(--bg-color, #343434);*/
+  cursor: pointer;
+  margin-top:5px;
+  /* Adding a subtle shadow */
+  /*box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --border-color: #444;
+    --bg-color: #fff;
+  }
+  #num-selector {
+    color: #222;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #bbb;
+    --bg-color: #343434;
+  }
+
+  #num-selector {
+    color: #f0efef;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/*------------------------- Share Buttons -------------------------*/
+
+.mode-button {
+  margin-top: 20px;
+  width: 52px;
+  height: 52px;
+  background-color: #1F1F1F;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.share-button {
+  margin-top: 20px;
+  width: 52px;
+  height: 52px;
+  background-color: #1F1F1F;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.espacioTopShare {
+  margin-top: 5px;
+}
+
+.espacio-9 {
+  margin-bottom: 8px;
+}
+
+.espacio-14 {
+  margin-bottom: 4px;
+}
+
+.espacio-46 {
+  margin-right: 46px;
+}
+
+.separator {
+  border-color: black;
+  width: 148px;
+  margin-left: 40px;
+  margin-top: 11px;
+  margin-bottom: 14px;
+}
+
+/* Share Platform options */
+.share-platform-container {
+  margin-top: 16px;
+  margin-bottom: 25px;
+  height: 42px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0; */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Estilos para posicionar los elementos de forma absoluta */
+.share-button-back {
+  position: absolute;
+  top: 238px;
+  /* Ajusta la posiciÃ³n vertical en pÃ­xeles */
+  left: 14px;
+  /* Ajusta la posiciÃ³n horizontal en pÃ­xeles */
+}
+
+.share-button-clipboard {
+  position: absolute;
+  top: 232px;
+  left: 40px;
+}
+
+.share-button-whatsapp {
+  position: absolute;
+  top: 232px;
+  left: 76px;
+}
+
+.share-button-x  {
+  position: absolute;
+  top: 232px;
+  left: 112px;
+}
+
+
+/*------------------------- Ecommerce final section -------------------------*/
+
+.text {
+  color: black;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.text:nth-child(1) {
+  color: #FF6347;
+}
+
+.text:nth-child(2) {
+  color: #9C27B0;
+}
+
+
+.ecommerceLink {
+  text-decoration: underline;
+  margin-bottom: 16px;
+  color: #8a5cee
+}
+
+.finalPhrase {
+  margin-bottom: 4px;
+}
+
+.finalPhraseNormalWords {
+  color: white;
+}
+
+
+
+
+/*------------------------- Settings Page -------------------------*/
+.toggle {
+  width: 36px;
+  height: 20px;
+  background-color: grey;
+  /* Fondo del toggle apagado */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  position: relative;
+  cursor: pointer;
+}
+
+.ball {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  /* Color de la bolita */
+  border-radius: 50%;
+  /* Hacer la bolita redonda */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.toggle.on {
+  background-color: tomato;
+  /* Fondo del toggle encendido */
+}
+
+.toggle.on .ball {
+  transform: translate(20px, -50%);
+  /* Mover la bolita a la posiciÃ³n de encendido */
+}
+
+.left-margin-12 {
+  margin-left: 12px;
+}
+
+.top-margin-24 {
+  margin-top: 24px;
+}
+
+.bottom-margin-16 {
+  margin-bottom: 16px;
+
+}
+
+
+.toggle-container {
+  cursor: pointer;
+  position: absolute;
+  /* right: 0px; */
+  /* Mueve el botÃ³n 10 pÃ­xeles a la derecha */
+  right: 12px;
+}
+
+
+.help-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  /* right: 0px; */
+  /* Mueve el botÃ³n 10 pÃ­xeles a la derecha */
+  top: 16;
+  right: 12px;
+  /* Alinea el botÃ³n con la parte superior del contenedor */
+}
+
+.lock-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  /* right: 0px; */
+  /* Mueve el botÃ³n 10 pÃ­xeles a la derecha */
+  top: 16;
+  right: 12px;
+  /* Alinea el botÃ³n con la parte superior del contenedor */
+}
+
+.alinear-horizontalmente {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.text-settings {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #b6b6b6;
+  /* verde oscuro */
+}
+
+#num-selector-settings {
+  color: #f0efef;
+  -webkit-appearance: none;
+  /* Oculta el ícono original en Chrome y Safari */
+  -moz-appearance: none;
+  /* Oculta el ícono original en Firefox */
+  appearance: none;
+  /* Oculta el ícono original en otros navegadores */
+  background: url('iconos/new_icons/expand_more.png') no-repeat right 4px center;
+  /* Ajusta este valor para mover tu ícono a la derecha */
+  font-size: 20px;
+  text-align: center;
+  /* agrega un espacio arriba y abajo de 8 píxeles y un margen de 4 píxeles a la derecha */
+  width: 100px;
+  height: 40px;
+  border: 2px solid var(--border-color, #777);
+  border-radius: 6px;
+  background-color: var(--bg-color, #343434);
+  cursor: pointer;  
+  margin-top:10px;
+  /* Adding a subtle shadow */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Light Theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --border-color: #444;
+    --bg-color: #fff;
+  }
+
+  #num-selector-settings {
+    color: #222;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-color: #bbb;
+    --bg-color: #343434;
+  }
+
+  #num-selector-settings {
+    color: #f0efef;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Share options */
+#options-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+
+
+/*------------------------- Tool Tip -------------------------*/
+.clipboard-tooltip {
+  position: absolute;
+  top: 263px;
+  left: 18px;
+  color: white;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  top: 263px;
+  left: 55px;
+  color: white;
+}
+
+.twitter-tooltip{
+  position: absolute;
+  top: 263px;
+  left: 93px;
+  color: white;
+}
+
+
+.settings-tooltip {
+  position: absolute;
+  top: 35px;
+  left: 180px;
+  color: white;
+}
+
+.faq-tooltip {
+  position: absolute;
+  top: 35px;
+  right: 9px;
+  color: white;
+}
+
+/* Default light mode */
+.clipboard-tooltip,
+.whatsapp-tooltip,
+.twitter-tooltip,
+.settings-tooltip,
+.faq-tooltip {
+  position: absolute;
+  color: black; /* Default text color in light mode */
+}
+/* Dark mode - when body has dark-theme class */
+.dark-theme .clipboard-tooltip,
+.dark-theme .whatsapp-tooltip,
+.dark-theme .twitter-tooltip,
+.dark-theme .settings-tooltip,
+.dark-theme .faq-tooltip {
+  color: white; /* Change text color in dark mode */
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: tomato;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px tomato;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.tabOnOf {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/*------------------------- Review -------------------------*/
+
+
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1F1F1F; /* Dark Mode Default */
+  text-align: center;
+}
+
+/* Title */
+.review-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF692E;
+  margin-bottom: 12px; /* Extra space below title */
+}
+
+.faq-text,
+.info-text,
+.review-text {
+    font-size: 14px;
+    color: #b6b6b6;
+    line-height: 1.4;
+    padding: 5px;
+}
+
+
+/* Review Button */
+.review-link {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #8a5cee;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 10px; /* More padding for better touch target */
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.review-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #a070ff;
+}
+
+/* Light Theme Adjustments */
+.light-theme .review-container {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.light-theme .review-title {
+  color: #FF692E;
+}
+
+.light-theme .review-text {
+  color: black;
+  padding: 0 10px;
+  padding-bottom: .5em;
+
+}
+
+.light-theme .review-link {
+  color: #8a5cee;
+  background: rgba(0, 0, 0, 0.05);
+  padding-bottom: .5em;
+}
+
+.light-theme .review-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+}

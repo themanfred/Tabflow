@@ -1,0 +1,212 @@
+body {
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-weight: bold;
+
+}
+
+h2 {
+  font-size: 1.0rem;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: #3a3a3a;
+  color: #f2f2f2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  /* box-shadow: -8px -8px 16px #242424, 8px 8px 16px #2e2e2e; */
+  transition: all 0.15s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 4px #ffffff, 0px 0px 4px #ffffff;
+}
+
+.arrow-left::before {
+  /* content: '<'; */
+  font-size: 1.5rem;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-right::before {
+  /* content: '>'; */
+  font-size: 1.5rem;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#new-window {
+  background-color: #3a3a3a;
+  color: #f2f2f2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 100%;
+  transition: all 0.15s ease-in-out;
+}
+
+#new-window {
+  margin-bottom: 15px;
+}
+
+#new-window:hover {
+  /* box-shadow: -4px -4px 8px #ffffff, 4px 4px 8px #ffffff; */
+  box-shadow: 0px 0px 4px #ffffff, 0px 0px 4px #ffffff;
+
+}
+
+img {
+  width: 40px;
+  /* height: 60px; */
+}
+
+a {
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #00aeff;
+  text-shadow: none;
+}
+
+select {
+  font-size: 1.2rem;
+  background-color: #3a3a3a;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: inset 10px 10px 20px #3b3b3b;
+  transition: all 0.3s ease-in-out;
+}
+
+
+#Reset {
+  font-size: 14px;
+  /* reduce el tamaño de la fuente */
+  line-height: 32px;
+  margin-left: 25px;
+
+  background-color: #3a3a3a;
+  /* establece el color de fondo en negro */
+  color: white;
+  /* establece el color del texto en blanco */
+  border-radius: 10px;
+  /* agrega bordes redondeados */
+  border: none;
+  /* elimina el borde por defecto */
+  padding: 5px 10px;
+  /* agrega relleno para hacer el botón más grande */
+
+  transition: all 0.15s ease-in-out;
+}
+
+#Reset:hover {
+  /* box-shadow: -4px -4px 8px #ffffff, 4px 4px 8px #ffffff; */
+  box-shadow: 0px 0px 4px #ffffff, 0px 0px 4px #ffffff;
+
+}
+
+.extension-width {
+  width: 256px;
+  /* background-color: red; */
+}
+
+.anchor-vertical-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  color: white;
+}
+
+/* Estilo del botón de compartir */
+.share-button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 2px 5px;
+  /* reduce el relleno para hacer el botón más compacto */
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.share-button img {
+  margin-top: 5px;
+  /* reduce el margen superior de la imagen para hacer el botón más compacto */
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  /* Transición suave */
+  width: 30px;
+}
+
+
+.share-button:hover {
+  background-color: #6d6d6d;
+  border-radius: 5px;
+}
+
+.share-buttons-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.share-buttons-row>* {
+  margin: 0 4px;
+}
+
+select {
+  font-size: 16px;
+}
+
+option:disabled {
+  color: #999999;
+  background-color: #dddddd;
+  font-style: italic;
+  font-weight: bold;
+}
